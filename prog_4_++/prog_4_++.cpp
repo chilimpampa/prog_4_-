@@ -82,3 +82,33 @@ namespace apartment {
 	int House::GetKOL_REZIDENTS() const {
 		return kol_rezidents;
 	}
+
+
+	//////////////////////////////////////////////////////////
+
+
+	ApartmentDataBase::ApartmentDataBase() {}
+	ApartmentDataBase::~ApartmentDataBase() {}
+
+	void ApartmentDataBase::AddOwner(const Owner& owner) {
+		owners.push_back(owner);
+	}
+
+	// Дополнение к методу ApartmentDataBase::AddFlat
+	void ApartmentDataBase::AddFlat(const Flat& flat) {
+		flats.push_back(flat);
+		totalApartments++;
+	}
+
+	void ApartmentDataBase::AddConcierge(const Concierge& concierge) {
+		concierges.push_back(concierge);
+	}
+
+	void ApartmentDataBase::AddDoorway(const Doorway& doorway) {
+		doorways.push_back(doorway);
+	}
+
+	void ApartmentDataBase::AddHouse(const House& house) {
+		houses.push_back(house);
+	}
+
