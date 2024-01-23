@@ -351,3 +351,8 @@ namespace apartment {
 		}
 		return true;
 	}
+
+	int  ApartmentDataBase::GetTotalApartments() {  // Статический метод для получения общего числа квартир
+		return totalApartments;
+	}
+}
